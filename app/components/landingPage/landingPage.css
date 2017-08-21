@@ -1,0 +1,53 @@
+.landingPage .sub-header{
+  border-bottom: 2px solid #ece9e9;
+  height: 2.3em;
+}
+.landingPage .sub-header .title{
+  line-height: 1.5em;
+}
+.landingPage .filters{
+  border: 2px solid #ece9e9;
+  padding: 0.5em 1em 0.5em 1em;
+  width: auto;
+  border-radius: 3px;
+  display: inline-block;
+}
+.landingPage .filters label{
+  margin-left: 1.5em;
+  margin-right: 0.5em;
+}
+.landingPage .filters input{
+  height: 1.8em;
+  padding: 0;
+}
+.landingPage .filters .fa-filter{
+  padding-right: 5px;
+}
+.action-buttons{
+  text-align: center;
+  width: 10%;
+}
+.action-buttons button{
+  border-radius: 2px;
+}
+.paginator{
+  border: 1px solid #ece9e9;
+  border-radius: 2px;
+}
+.paginator div{
+  width: 2em;
+  height: 1.5em;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #ece9e9;
+  color: blue;
+  display: table-cell;
+  vertical-align: middle;
+}
+.paginator div.active{
+  background-color: #F9F9F9;
+}
+.icon{
+  width: 2em;
+  text-align: center;
+}

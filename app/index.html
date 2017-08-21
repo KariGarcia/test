@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="DeliveryApp">
 <head>
+  <base href="/">
   <meta charset="utf-8">
   <title>Delivery App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
   <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="components/landingPage/landingPage.css">
+  
 </head>
 <body>
-Parte superior de body
+  <div class="header">
+    Delivery Online
+  </div>
   <div ng-view></div>
-  Parte inferior de body
-
+  <div class="footer"></div>
 
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
+
   <script src="app.js"></script>
   <script src="components/landingPage/landingPage.js"></script>
+  <script src="components/templates/grid/grid.js"></script>
 </body>
 </html>
