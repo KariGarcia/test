@@ -8,25 +8,20 @@
         <label>Dirección</label>
         <input type="text"  ng-model="q.adress" name="" ng-change="filterData()">
     </div>
-
-
 </div>
-
 
 <div class="table font-small margin-top-20">
 
     <div class="row bold">
-        <!-- <div class="cell" ng-repeat="title in columnsTitles">{{title}}</div> -->
-        <div class="cell" ng-repeat="column in data.columnsConfig" ng-click="sortBy(column.propertyName)">
-            {{column.columnTitle}} 
-            <i ng-if="column.isSortable"  ng-class="(reverse)?'fa fa-angle-up':'fa fa-angle-down'" class="pull-right icon"></i>
+        <div class="cell" ng-repeat="(key, value) in columnsConfig" ng-click="sortBy(key)">
+            {{key}} 
+            <i ng-if="value.isSortable"  ng-class="(reverse)?'fa fa-angle-up':'fa fa-angle-down'" class="pull-right icon"></i>
         </div>
         <div class="cell"></div>
     </div>
 
-    <!-- <div class="row" ng-repeat="content in filteredData | orderBy:propertyName:reverse | limitTo:pageSize"> -->
     <div class="row" ng-repeat="content in filteredData | orderBy:propertyName:reverse | startFrom:currentPage*pageSize | limitTo:pageSize">
-        <div class="cell" ng-repeat="col in data.columnsConfig">{{content[col.propertyName]}}</div>
+        <div class="cell" ng-repeat="col in columnsConfig">{{content[col.propertyName]}}</div>
         <div class="cell action-buttons">
             <button class="bg-blue" ng-click="updateItem(content.id)"><i class="fa fa-trash white"></i></button>
             <button class="bg-red" ng-click="deleteItem(content.id)"><i class="fa fa-pencil white"></i></button>
