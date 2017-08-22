@@ -1,8 +1,8 @@
-.landingPage .sub-header{
+.sub-header{
   border-bottom: 2px solid #ece9e9;
   height: 2.3em;
 }
-.landingPage .sub-header .title{
+.sub-header .title{
   line-height: 1.5em;
 }
 .landingPage .filters{

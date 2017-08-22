@@ -1,23 +1,10 @@
 'use strict';
 
-angular.module('DeliveryApp.landingPage', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {
-    templateUrl: 'components/landingPage/landingPage.html',
-    controller: 'LandingPageCtrl',
-    controllerAs: 'ctrl'
-  });
-}])
+angular.module('DeliveryApp.landingPage',[])
 
 .controller('LandingPageCtrl', function($scope, $filter) {
 
   this.pageSize = 5
-  this.columnsConfig  = [
-    {columnTitle:"Nombre", propertyName:"name", isSortable: true, sortFunction:false}
-    , {columnTitle:"Dirección", propertyName:"adress", isSortable: false, sortFunction:false}
-    , {columnTitle:"Teléfono", propertyName:"phone", isSortable: false, sortFunction:false}
-  ]
   this.columnsConfig  = {
     "Nombre":{ propertyName:"name", isSortable: true, sortFunction:false}
     , "Dirección":{ propertyName:"adress", isSortable: false, sortFunction:false}

@@ -1,13 +1,12 @@
 <div class="container landingPage">
     <div class="sub-header row">
         <span class="title fs-large bold">Listado de deliveries</span>
-        <button class="button bg-blue white pull-right box-shadow">
+        <button ng-click="goToState('create.delivery')" class="button bg-blue white pull-right box-shadow">
             Crear nuevo delivery
         </button>
     </div>
     <br>
 
-    <!-- <grid data=ctrl.data></grid> -->
     <grid columns-config="ctrl.columnsConfig" content="ctrl.columnsContent" page-size="ctrl.pageSize"></grid>
 
 </div>

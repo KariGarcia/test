@@ -20,7 +20,7 @@
         <div class="cell"></div>
     </div>
 
-    <div class="row" ng-repeat="content in filteredData | orderBy:propertyName:reverse | startFrom:currentPage*pageSize | limitTo:pageSize">
+    <div class="row" ng-repeat="content in filteredData | startFrom:currentPage*pageSize | limitTo:pageSize">
         <div class="cell" ng-repeat="col in columnsConfig">{{content[col.propertyName]}}</div>
         <div class="cell action-buttons">
             <button class="bg-blue" ng-click="updateItem(content.id)"><i class="fa fa-trash white"></i></button>

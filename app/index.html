@@ -12,18 +12,21 @@
   <link rel="stylesheet" href="components/landingPage/landingPage.css">
   
 </head>
-<body>
+<body ng-controller="BaseCtrl">
   <div class="header">
     Delivery Online
   </div>
-  <div ng-view></div>
+  <div ui-view></div>
   <div class="footer"></div>
 
   <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 
   <script src="app.js"></script>
+  <script src="routes.app.js"></script>
+  <script src="components/base/baseCtrl.js"></script>
   <script src="components/landingPage/landingPage.js"></script>
   <script src="components/templates/grid/grid.js"></script>
+  <script src="components/forms/delivery/deliveryForm.js"></script>
 </body>
 </html>

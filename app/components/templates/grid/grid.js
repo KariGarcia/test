@@ -26,20 +26,21 @@ function GridCtrl($scope, $filter){
 
   $scope.propertyName = null;
   for(var column in $scope.columnsConfig){
-    if(column.isSortable){
-      $scope.propertyName = column.propertyName;
-      return;
+    if($scope.columnsConfig[column].isSortable){
+      $scope.propertyName = $scope.columnsConfig[column].propertyName;
+      break;
     }
   }
-  $scope.reverse = true;
+  // $scope.reverse = true;
   $scope.filteredData = $filter('orderBy')($scope.columnsContent, $scope.propertyName, $scope.reverse);
+  
   $scope.sortBy = function(propertyName) {
-    $scope.reverse = (propertyName !== null && $scope.propertyName === propertyName) ? !$scope.reverse : false;
+    // $scope.reverse = (propertyName !== null && $scope.propertyName === propertyName) ? !$scope.reverse : false;
     $scope.propertyName = propertyName;
     if($scope.columnsConfig[propertyName].sortFunction){
       $scope.columnsConfig[propertyName].sortFunction();
     } else{
-      $scope.filteredData = $filter('orderBy')($scope.filteredData, $scope.propertyName, $scope.reverse);
+      $scope.filteredData = $filter('orderBy')($scope.filteredData, $scope.propertyName, true);
     }
   };
 

@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('DeliveryApp', [
-  'ngRoute',
+  'ui.router',
   'DeliveryApp.landingPage'
 ])
-.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+.config(['$locationProvider', function($locationProvider) {
   $locationProvider.html5Mode({enabled:true})
-  $routeProvider.otherwise({redirectTo: '/'});
+  
 }]);
